@@ -1,0 +1,20 @@
+{
+  "ffmpeg": "tools/ffmpeg.exe",
+  "ffprobe": "tools/ffprobe.exe",
+  "whisper": "tools/whisper-cli.exe",
+  "whisper_model": "models/ggml-base.bin",
+  "threads": 4,
+  "voices": {
+    "windows": { "engine": "sapi", "name": null, "rate": 0, "volume": 100 },
+    "lessac": { "engine": "piper", "executable": "tools/piper/piper.exe", "model": "models/en_US-lessac-medium.onnx", "speaker": 0 },
+    "clone": {
+      "engine": "zipvoice",
+      "executable": "tools/sherpa/sherpa-onnx-offline-tts.exe",
+      "model_dir": "models/sherpa-onnx-zipvoice-distill-int8-zh-en-emilia",
+      "vocoder": "models/vocos_24khz.onnx",
+      "reference_audio": "models/reference.wav",
+      "reference_text": "models/reference.txt",
+      "steps": 4
+    }
+  }
+}
